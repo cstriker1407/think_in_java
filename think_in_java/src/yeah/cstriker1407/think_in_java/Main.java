@@ -5,12 +5,37 @@ import yeah.cstriker1407.think_in_java.Enum.EnumsWith2Interfaces;
 import yeah.cstriker1407.think_in_java.Enum.EnumsWithFunc;
 import yeah.cstriker1407.think_in_java.Enum.EnumInter;
 import yeah.cstriker1407.think_in_java.Enum.SimpleEnums;
+import yeah.cstriker1407.think_in_java.Generics.GenericClass;
+import yeah.cstriker1407.think_in_java.Generics.GenericExtends;
+import yeah.cstriker1407.think_in_java.Generics.GenericFuns;
 
 public class Main
 {
 	public static void main(String[] args)
 	{
 		System.out.println("Enum Learn");
+//		EnumLearn();
+		System.out.println("Generic Learn");
+		GenericLearn();
+		
+		
+		
+	}
+
+	private static void GenericLearn()
+	{
+		GenericClass<Integer> genInt = new GenericClass<Integer>(1);
+		GenericClass<String> genStrClass = new GenericClass<String>("Hello");
+		
+		GenericFuns.callFun();
+		
+		GenericExtends.callFun();
+		
+	}
+
+
+	private static void EnumLearn()
+	{
 		for (SimpleEnums simpleItem : SimpleEnums.values())
 		{
 			System.out.println(simpleItem.name());
@@ -28,9 +53,35 @@ public class Main
 		System.out.println(testDistinctEnum.getInt());
 		DistinctEnum lookupEnum = DistinctEnum.map.get(1);
 		System.out.println(lookupEnum.getInt());
-		
-		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	private static void testfun_EnumWithInterfaces(EnumInter interfaces)
