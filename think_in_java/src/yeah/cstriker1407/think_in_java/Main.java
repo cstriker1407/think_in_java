@@ -1,5 +1,6 @@
 package yeah.cstriker1407.think_in_java;
 
+import yeah.cstriker1407.think_in_java.Array.Base;
 import yeah.cstriker1407.think_in_java.Enum.DistinctEnum;
 import yeah.cstriker1407.think_in_java.Enum.EnumsWith2Interfaces;
 import yeah.cstriker1407.think_in_java.Enum.EnumsWithFunc;
@@ -13,14 +14,26 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Enum Learn");
+//		System.out.println("Enum Learn");
 //		EnumLearn();
-		System.out.println("Generic Learn");
-		GenericLearn();
+//		System.out.println("Generic Learn");
+//		GenericLearn();
+		
+		Base.newArray();
+		
+		
+		
 		
 		
 		
 	}
+	
+	
+	
+	
+	
+	
+	
 
 	private static void GenericLearn()
 	{
