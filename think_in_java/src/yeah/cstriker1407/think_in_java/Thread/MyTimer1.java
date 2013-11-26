@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
+//http://blog.csdn.net/ahxu/article/details/249610
 public class MyTimer1
 {
 	public static void test()
