@@ -1,7 +1,7 @@
 package yeah.cstriker1407.think_in_java.Thread;
 
 import java.util.Random;
-
+//http://longdick.iteye.com/blog/453615
 public class NotifyTest
 {
 	public static void test()
