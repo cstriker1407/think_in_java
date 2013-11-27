@@ -9,6 +9,16 @@ import yeah.cstriker1407.think_in_java.Enum.SimpleEnums;
 import yeah.cstriker1407.think_in_java.Generics.GenericClass;
 import yeah.cstriker1407.think_in_java.Generics.GenericExtends;
 import yeah.cstriker1407.think_in_java.Generics.GenericFuns;
+import yeah.cstriker1407.think_in_java.Thread.AtomaticTest;
+import yeah.cstriker1407.think_in_java.Thread.BlockingQueueTest;
+import yeah.cstriker1407.think_in_java.Thread.ConditionTest;
+import yeah.cstriker1407.think_in_java.Thread.CountDownLatchTest;
+import yeah.cstriker1407.think_in_java.Thread.CyclicBarrierTest;
+import yeah.cstriker1407.think_in_java.Thread.ReentrantLockTest;
+import yeah.cstriker1407.think_in_java.Thread.ReentrantReadWriteLockTest;
+import yeah.cstriker1407.think_in_java.Thread.SyncTest;
+import yeah.cstriker1407.think_in_java.Thread.ThreadSample1;
+import yeah.cstriker1407.think_in_java.Thread.ThreadSample2;
 
 public class Main
 {
@@ -19,12 +29,21 @@ public class Main
 //		System.out.println("Generic Learn");
 //		GenericLearn();
 		
-		Base.newArray();
+//		Base.newArray();
 		
 		
+//		ReentrantLockTest.test();
+//		ReentrantReadWriteLockTest.test();
+//		AtomaticTest.test();
+//		ConditionTest.test();
+//		BlockingQueueTest.test();
+//		CyclicBarrierTest.test();
+//		SyncTest.test();
+//		ThreadSample1.test();
+//		ThreadSample2.test();
+//		ThreadSample2.test2();
 		
-		
-		
+		CountDownLatchTest.test();
 		
 	}
 	

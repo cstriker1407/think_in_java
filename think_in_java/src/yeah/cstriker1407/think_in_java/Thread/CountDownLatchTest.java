@@ -2,7 +2,7 @@ package yeah.cstriker1407.think_in_java.Thread;
 
 import java.util.concurrent.CountDownLatch;
 
-public class ThreadSample3
+public class CountDownLatchTest
 {
 	public static void test()
 	{

@@ -1,4 +1,4 @@
-package yeah.cstriker1407.think_in_java.Thread.lock;
+package yeah.cstriker1407.think_in_java.Thread;
 
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -32,9 +32,9 @@ class ReetThread extends Thread
 	@Override
 	public void run()
 	{
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 2; i++)
 		{
-			lock.lock();
+//			lock.lock();
 			
 			System.out.println("before sleep :" + id);
 			try
@@ -47,7 +47,16 @@ class ReetThread extends Thread
 			}
 			System.out.println("after sleep :" + id);
 			
-			lock.unlock();
+//			lock.unlock();
+			
+			try
+			{
+				Thread.sleep(1);
+			}
+			catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
 		}
 	}
 }

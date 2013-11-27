@@ -4,17 +4,16 @@ import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 
-//http://lavasoft.blog.51cto.com/62575/222541
 public class AtomaticTest
 {
 	public static void test()
 	{
 		AtomicInteger money = new AtomicInteger(100);
 		
-		MoneyAdd t1 = new MoneyAdd(1, money);
+		MoneyAdd t1 = new MoneyAdd(0, money);
 		MoneyAdd t2 = new MoneyAdd(1, money);
-		MoneyAdd t3 = new MoneyAdd(1, money);
-		MoneyAdd t4 = new MoneyAdd(1, money);
+		MoneyAdd t3 = new MoneyAdd(2, money);
+		MoneyAdd t4 = new MoneyAdd(3, money);
 		
 		t1.start();
 		t2.start();
@@ -37,11 +36,19 @@ class MoneyAdd extends Thread
 	@Override
 	public void run()
 	{
-		for (int i = 0; i < 50; i++)
+		for (int i = 0; i < 5; i++)
 		{
 			int add = new Random().nextInt(100);
 			int total = money.addAndGet(add);
-			System.out.println("线程"+ id + " 存了"+ add +"  当前有" + total);
+			System.out.println("线程"+ id + " 增加了"+ add +"  当前有" + total + "原始：" + (total - add));
+			
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+			
 		}
 	}
 }

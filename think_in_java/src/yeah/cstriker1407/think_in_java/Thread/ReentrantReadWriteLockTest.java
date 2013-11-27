@@ -1,4 +1,4 @@
-package yeah.cstriker1407.think_in_java.Thread.lock;
+package yeah.cstriker1407.think_in_java.Thread;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -13,16 +13,15 @@ public class ReentrantReadWriteLockTest
 		ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
 		WriteThread w1 = new WriteThread(0, bean, lock.writeLock());
 		ReadThread r1 = new ReadThread(0, bean, lock.readLock());
-		ReadThread r2 = new ReadThread(0, bean, lock.readLock());
-		ReadThread r3 = new ReadThread(0, bean, lock.readLock());
+		ReadThread r2 = new ReadThread(1, bean, lock.readLock());
+		ReadThread r3 = new ReadThread(2, bean, lock.readLock());
 		
+		w1.start();
 		r1.start();
 		r2.start();
 		r3.start();
 	}
 }
-
-
 
 class Bean
 {
@@ -43,7 +42,6 @@ class WriteThread extends Thread
 		this.lock = lock;
 	}
 
-
 	@Override
 	public void run()
 	{
@@ -51,7 +49,7 @@ class WriteThread extends Thread
 		{
 			lock.lock();
 			
-			System.out.println("write before sleep :" + id);
+			System.out.println("         write before sleep :" + id);
 			try
 			{
 				Thread.sleep(1000);
@@ -61,11 +59,20 @@ class WriteThread extends Thread
 				e.printStackTrace();
 			}
 			bean.x = i;
-			System.out.println("Read value :" + bean.x);
+			System.out.println("         write value :" + bean.x);
 			
-			System.out.println("write after sleep :" + id);
+			System.out.println("         write after sleep :" + id);
 			
 			lock.unlock();
+			
+			try
+			{
+				Thread.sleep(1);
+			}
+			catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
 		}
 	}
 }
@@ -92,7 +99,7 @@ class ReadThread extends Thread
 		{
 			lock.lock();
 			
-			System.out.println("Read before sleep :" + id);
+			System.out.println("Thread:"+ id +" Read before sleep :" + id);
 			try
 			{
 				Thread.sleep(1000);
@@ -101,9 +108,9 @@ class ReadThread extends Thread
 			{
 				e.printStackTrace();
 			}
-			System.out.println("Read value :" + bean.x);
+			System.out.println("Thread:"+ id +" Read value :" + bean.x);
 			
-			System.out.println("Read after sleep :" + id);
+			System.out.println("Thread:"+ id +" Read after sleep :" + id);
 			
 			lock.unlock();
 		}
