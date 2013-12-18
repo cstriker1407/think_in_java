@@ -13,7 +13,7 @@ public class CountDownLatchTest
 		{
 			new Thread(new Worker(startSignal, doneSignal)).start();
 		}
-		System.out.println("the runnables are inited");
+
 		try
 		{
 			Thread.sleep(1000);
@@ -22,7 +22,7 @@ public class CountDownLatchTest
 		{
 			e1.printStackTrace();
 		}
-
+		System.out.println("the runnables are inited");
 		System.out.println("the runnables are free to start");
 		startSignal.countDown();
 		
@@ -35,12 +35,12 @@ public class CountDownLatchTest
 			e.printStackTrace();
 		} 
 	}
-
 }
 
 class Worker implements Runnable
 {
 	private static int count = 0;
+	private int idx = 0;
 	private final CountDownLatch startSignal;
 	private final CountDownLatch doneSignal;
 
@@ -48,20 +48,20 @@ class Worker implements Runnable
 	{
 		this.startSignal = startSignal;
 		this.doneSignal = doneSignal;
-		count++;
+		idx = count++;
 	}
 
 	public void run()
 	{
 		try
 		{
-			System.out.println("the runnable is begin to init:" + count);
+			System.out.println("the runnable is begin to init:" + idx);
 			startSignal.await();
-			System.out.println("the runnable is begin to start:" + count);
+			System.out.println("the runnable is begin to start:" + idx);
 			Thread.sleep(2000);
 
 			doneSignal.countDown();
-			System.out.println("the runnable is finish:" + count);
+			System.out.println("the runnable is finish:" + idx);
 		}
 		catch (InterruptedException ex)
 		{

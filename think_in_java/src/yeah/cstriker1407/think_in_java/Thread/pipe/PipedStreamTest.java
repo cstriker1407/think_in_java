@@ -32,12 +32,10 @@ public class PipedStreamTest
 class PipedOutThread extends Thread
 {
 	PipedOutputStream pos;
-
 	public PipedOutThread(PipedOutputStream pos)
 	{
 		this.pos = pos;
 	}
-
 	@Override
 	public void run()
 	{

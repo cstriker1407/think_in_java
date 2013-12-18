@@ -19,6 +19,7 @@ import yeah.cstriker1407.think_in_java.Thread.ReentrantReadWriteLockTest;
 import yeah.cstriker1407.think_in_java.Thread.SyncTest;
 import yeah.cstriker1407.think_in_java.Thread.ThreadSample1;
 import yeah.cstriker1407.think_in_java.Thread.ThreadSample2;
+import yeah.cstriker1407.think_in_java.Thread.pipe.PipedStreamTest;
 
 public class Main
 {
@@ -43,7 +44,9 @@ public class Main
 //		ThreadSample2.test();
 //		ThreadSample2.test2();
 		
-		CountDownLatchTest.test();
+//		CountDownLatchTest.test();
+		PipedStreamTest.test();
+		
 		
 	}
 	
