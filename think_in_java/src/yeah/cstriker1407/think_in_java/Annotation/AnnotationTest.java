@@ -11,6 +11,7 @@ import java.lang.reflect.Method;
 
 
 //http://wanqiufeng.blog.51cto.com/409430/458883
+//http://www.cnblogs.com/peida/archive/2013/04/24/3036689.html
 public class AnnotationTest
 {
 	@MethodDesc(id=0,des="this is test method")
@@ -46,6 +47,23 @@ public class AnnotationTest
 		catch (Exception e)
 		{
 		}
+		
+		/*
+输出：
+@yeah.cstriker1407.think_in_java.Annotation.FirstDesc(value=This is a first description)
+@yeah.cstriker1407.think_in_java.Annotation.FourthDesc(des=This is Fourth Desc, id=4)
+@yeah.cstriker1407.think_in_java.Annotation.SecondDesc(des=This is a second description)
+@yeah.cstriker1407.think_in_java.Annotation.ThirdDesc(id=3, des=This is a third description)
+==
+fourthDesc:id=4 des:this FourthDescClassB is fourth desc class B
+@yeah.cstriker1407.think_in_java.Annotation.FourthDesc(des=this FourthDescClassB is fourth desc class B, id=4)
+==
+@yeah.cstriker1407.think_in_java.Annotation.FirstDesc(value=This is FourthDescClassB a first description)
+@yeah.cstriker1407.think_in_java.Annotation.FourthDesc(des=this FourthDescClassB is fourth desc class B, id=4)
+@yeah.cstriker1407.think_in_java.Annotation.SecondDesc(des=This is a second description)
+==
+@yeah.cstriker1407.think_in_java.Annotation.MethodDesc(des=this is test method, id=0)
+		 */
 	}
 	
 	@FirstDesc("This is a first description")
@@ -70,7 +88,7 @@ public class AnnotationTest
 @Target(ElementType.TYPE)//这个标注应用于类
 @Retention(RetentionPolicy.RUNTIME)//标注会一直保留到运行时
 @Documented//将此注解包含在javadoc中
-@Inherited
+@Inherited//本注解可以被继承
 @interface FirstDesc
 {
 	public String value();//value比较特殊，它在被指定参数的时候可以不用显示的写出来
@@ -80,7 +98,7 @@ public class AnnotationTest
 @Target(ElementType.TYPE)//这个标注应用于类
 @Retention(RetentionPolicy.RUNTIME)//标注会一直保留到运行时
 @Documented//将此注解包含在javadoc中
-@Inherited
+@Inherited//本注解可以被继承
 @interface SecondDesc
 {
 	public String des();

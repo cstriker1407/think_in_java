@@ -1,5 +1,7 @@
-package yeah.cstriker1407.think_in_java;
+package yeah.cstriker1407;
 
+import yeah.cstriker1407.effectivejava.Rule39;
+import yeah.cstriker1407.effectivejava.Rule43;
 import yeah.cstriker1407.think_in_java.Annotation.AnnotationTest;
 import yeah.cstriker1407.think_in_java.Array.Base;
 import yeah.cstriker1407.think_in_java.Enum.DistinctEnum;
@@ -47,8 +49,10 @@ public class Main
 //		CountDownLatchTest.test();
 	
 		
-		AnnotationTest.test();
+//		AnnotationTest.test();
 		
+		Rule39.test();
+		Rule43.test();
 	}
 	
 	
