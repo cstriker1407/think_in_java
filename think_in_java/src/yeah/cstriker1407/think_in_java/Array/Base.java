@@ -20,7 +20,6 @@ public class Base
 				{"1","2","3"},
 				{"4","5","6"},				
 			};
-		System.out.println(dArray.length);//2
 		
 		String[][] eArray = new String[2][];
 		eArray[0] = new String[]{"x","y","z"};
@@ -30,6 +29,8 @@ public class Base
 				{"1","2","3"},
 				{"4","5","6","7","8"},				
 			};
+		
+		System.out.println(dArray.length);//2
 		System.out.println(Arrays.deepToString(fArray));
 
 		System.out.println(Arrays.deepToString(funTest(new Integer[]{1,2,3})));

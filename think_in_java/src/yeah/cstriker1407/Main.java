@@ -33,7 +33,7 @@ public class Main
 //		System.out.println("Generic Learn");
 //		GenericLearn();
 		
-//		Base.newArray();
+		Base.newArray();
 		
 		
 //		ReentrantLockTest.test();

@@ -10,7 +10,7 @@ public class Rule39
 			Rule39Bean big = new Rule39Bean(20);
 			PeriodA periodA = new PeriodA(small, big);
 			periodA.check();
-			big.value = 5;//修改
+			big.value = 5;//修改成功
 			periodA.check();
 		}
 		
@@ -19,16 +19,9 @@ public class Rule39
 			Rule39Bean big = new Rule39Bean(20);
 			PeriodB periodB = new PeriodB(small, big);
 			periodB.check();
-			big.value = 5;//修改
+			big.value = 5;//修改失败
 			periodB.check();
-		}
-		
-		{
-			Rule39Bean small = new Rule39Bean(10);
-			Rule39Bean big = new Rule39Bean(20);
-			PeriodB periodB = new PeriodB(small, big);
-			periodB.check();
-			periodB.getBig().value = 5;//修改
+			periodB.getBig().value = 5;//修改成功
 			periodB.check();
 		}
 	
@@ -37,7 +30,9 @@ public class Rule39
 			Rule39Bean big = new Rule39Bean(20);
 			PeriodC periodC = new PeriodC(small, big);
 			periodC.check();
-			periodC.getBig().value = 5;//修改
+			big.value = 5;//修改失败
+			periodC.check();
+			periodC.getBig().value = 5;//修改失败
 			periodC.check();
 		}
 	}
