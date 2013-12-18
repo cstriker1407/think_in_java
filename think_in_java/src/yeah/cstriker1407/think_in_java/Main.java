@@ -1,5 +1,6 @@
 package yeah.cstriker1407.think_in_java;
 
+import yeah.cstriker1407.think_in_java.Annotation.AnnotationTest;
 import yeah.cstriker1407.think_in_java.Array.Base;
 import yeah.cstriker1407.think_in_java.Enum.DistinctEnum;
 import yeah.cstriker1407.think_in_java.Enum.EnumsWith2Interfaces;
@@ -43,7 +44,10 @@ public class Main
 //		ThreadSample2.test();
 //		ThreadSample2.test2();
 		
-		CountDownLatchTest.test();
+//		CountDownLatchTest.test();
+	
+		
+		AnnotationTest.test();
 		
 	}
 	
