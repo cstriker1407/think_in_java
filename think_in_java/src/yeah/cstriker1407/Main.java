@@ -48,26 +48,7 @@ public class Main
 //		ThreadSample2.test2();
 		
 //		CountDownLatchTest.test();
-<<<<<<< HEAD:think_in_java/src/yeah/cstriker1407/think_in_java/Main.java
-		PipedStreamTest.test();
-		
-=======
-	
-		
-//		AnnotationTest.test();
->>>>>>> 7f8d90ebd4c825ed227bf0b07a8a639c6ad10a00:think_in_java/src/yeah/cstriker1407/Main.java
-		
-		Rule39.test();
-		Rule43.test();
 	}
-	
-	
-	
-	
-	
-	
-	
-
 	private static void GenericLearn()
 	{
 		GenericClass<Integer> genInt = new GenericClass<Integer>(1);
