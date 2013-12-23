@@ -1,28 +1,14 @@
 package yeah.cstriker1407;
 
-import yeah.cstriker1407.effectivejava.Rule39;
-import yeah.cstriker1407.effectivejava.Rule43;
-import yeah.cstriker1407.think_in_java.Annotation.AnnotationTest;
-import yeah.cstriker1407.think_in_java.Array.Base;
+import yeah.cstriker1407.beautycode.SortTest;
 import yeah.cstriker1407.think_in_java.Enum.DistinctEnum;
+import yeah.cstriker1407.think_in_java.Enum.EnumInter;
 import yeah.cstriker1407.think_in_java.Enum.EnumsWith2Interfaces;
 import yeah.cstriker1407.think_in_java.Enum.EnumsWithFunc;
-import yeah.cstriker1407.think_in_java.Enum.EnumInter;
 import yeah.cstriker1407.think_in_java.Enum.SimpleEnums;
 import yeah.cstriker1407.think_in_java.Generics.GenericClass;
 import yeah.cstriker1407.think_in_java.Generics.GenericExtends;
 import yeah.cstriker1407.think_in_java.Generics.GenericFuns;
-import yeah.cstriker1407.think_in_java.Thread.AtomaticTest;
-import yeah.cstriker1407.think_in_java.Thread.BlockingQueueTest;
-import yeah.cstriker1407.think_in_java.Thread.ConditionTest;
-import yeah.cstriker1407.think_in_java.Thread.CountDownLatchTest;
-import yeah.cstriker1407.think_in_java.Thread.CyclicBarrierTest;
-import yeah.cstriker1407.think_in_java.Thread.ReentrantLockTest;
-import yeah.cstriker1407.think_in_java.Thread.ReentrantReadWriteLockTest;
-import yeah.cstriker1407.think_in_java.Thread.SyncTest;
-import yeah.cstriker1407.think_in_java.Thread.ThreadSample1;
-import yeah.cstriker1407.think_in_java.Thread.ThreadSample2;
-import yeah.cstriker1407.think_in_java.Thread.pipe.PipedStreamTest;
 
 public class Main
 {
@@ -33,7 +19,7 @@ public class Main
 //		System.out.println("Generic Learn");
 //		GenericLearn();
 		
-		Base.newArray();
+//		Base.newArray();
 		
 		
 //		ReentrantLockTest.test();
@@ -48,6 +34,12 @@ public class Main
 //		ThreadSample2.test2();
 		
 //		CountDownLatchTest.test();
+		
+		SortTest.testSort();
+		
+		
+		
+		
 	}
 	private static void GenericLearn()
 	{
