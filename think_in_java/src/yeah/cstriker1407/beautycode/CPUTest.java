@@ -119,8 +119,6 @@ public class CPUTest
 		return averageCPUPercent / getCpuNums();
 	}
 
-
-
 	private static int getCpuNums()
 	{
 		Sigar sigar = new Sigar();
