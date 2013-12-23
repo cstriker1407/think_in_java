@@ -127,7 +127,7 @@ public class SortTest
 			System.out.println("将最大数翻到底部：" + middleList.toString());
 			reverseTime++;
 			
-			//没有排序的数据--
+			//没有排序的数据个数--
 			numNoSort--;
 		}
 		System.out.println("总数:"+ totalNum +" 翻转次数为：" + reverseTime);
