@@ -35,6 +35,20 @@ public class Base
 
 		System.out.println(Arrays.deepToString(funTest(new Integer[]{1,2,3})));
 		System.out.println(Arrays.deepToString(funTest( new String[]{"a","b","c", "d", "e"} )));
+		
+		
+		
+		int [][] diamonds = 
+			{
+				{2 ,6},
+				{2 ,3},
+				{6 ,5},
+				{5 ,4},
+				{4 ,6},
+			};
+		
+		int [][] x1 = new int [2][3];
+		int [][] x2 = new int [2][];
 	}
 
 }

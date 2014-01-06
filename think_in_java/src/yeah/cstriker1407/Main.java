@@ -1,7 +1,9 @@
 package yeah.cstriker1407;
 
 import yeah.cstriker1407.beautycode.DiscountTest;
+import yeah.cstriker1407.beautycode.DiamondTest;
 import yeah.cstriker1407.beautycode.NumSearchTest;
+import yeah.cstriker1407.beautycode.PoolTest;
 import yeah.cstriker1407.beautycode.SortTest;
 import yeah.cstriker1407.think_in_java.Enum.DistinctEnum;
 import yeah.cstriker1407.think_in_java.Enum.EnumInter;
@@ -39,7 +41,11 @@ public class Main
 		
 //		SortTest.testSort();
 //		DiscountTest.test();
-		NumSearchTest.test();
+//		NumSearchTest.test();
+		
+//		PoolTest.test();
+		
+		DiamondTest.test();
 		
 		
 	}
