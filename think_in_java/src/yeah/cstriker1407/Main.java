@@ -1,10 +1,7 @@
 package yeah.cstriker1407;
 
-import yeah.cstriker1407.beautycode.DiscountTest;
-import yeah.cstriker1407.beautycode.DiamondTest;
-import yeah.cstriker1407.beautycode.NumSearchTest;
-import yeah.cstriker1407.beautycode.PoolTest;
-import yeah.cstriker1407.beautycode.SortTest;
+import yeah.cstriker1407.beautycode.BackTraceTest;
+import yeah.cstriker1407.beautycode.LiftTest;
 import yeah.cstriker1407.think_in_java.Enum.DistinctEnum;
 import yeah.cstriker1407.think_in_java.Enum.EnumInter;
 import yeah.cstriker1407.think_in_java.Enum.EnumsWith2Interfaces;
@@ -45,8 +42,10 @@ public class Main
 		
 //		PoolTest.test();
 		
-		DiamondTest.test();
+//		DiamondTest.test();
+//		BackTraceTest.test();
 		
+		LiftTest.test();
 		
 	}
 	private static void GenericLearn()
@@ -57,7 +56,6 @@ public class Main
 		GenericFuns.callFun();
 		
 		GenericExtends.callFun();
-		
 	}
 
 

@@ -142,7 +142,7 @@ public class DiamondTest
 				maxValue[i][j] = i == 0 ? 0:maxValue[i-1][j];
 				if (i > 0 && j > diamonds[i-1][0])
 				{
-					maxValue[i][j] =max(maxValue[i-1][j-diamonds[i-1][0]] + diamonds[i-1][1], maxValue[i - 1][j]) ;
+					maxValue[i][j] = max(maxValue[i-1][j-diamonds[i-1][0]] + diamonds[i-1][1], maxValue[i - 1][j]) ;
 				}
 			}
 		}
